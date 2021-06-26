@@ -1,0 +1,24 @@
+*.gem
+.bundle
+.sass-cache
+_site
+Gemfile.lock
+.DS_Store
+vendor
+
+## Gitgnorable latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+__latexindent_temp.tex
+*fdb_latexmk
+*.synctex.gz
