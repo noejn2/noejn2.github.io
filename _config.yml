@@ -11,11 +11,11 @@ plainwhite:
   tagline: Ph.D. Student
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
-  
+
   # generate social links in footer
   social_links:
     twitter: normalEconomist
-    github:  noejn2
+    github: noejn2
     linkedIn: in/nnrnoah
 
   navigation:
@@ -25,8 +25,8 @@ plainwhite:
       url: "/current-research/current-research"
     - title: CV
       url: "/cv/cv_nava.pdf"
-    - title: R | E | A | L
-      url: "http://www.real.illinois.edu/"
+    #- title: R | E | A | L
+    #  url: "http://www.real.illinois.edu/"
 
 theme: plainwhite
 
