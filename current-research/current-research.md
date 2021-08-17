@@ -5,17 +5,16 @@ title: "Current Research"
 
 # These are the chapters of my thesis to be proposed in late September
 
+### A model of U.S. domestic crop trade to study state's food vulnerability to supply chain disruptions --- Job Market Paper
+
+Paper with prof. [William Ridley](https://ace.illinois.edu/directory/wridley) and prof. [Sandy Dall'Erba](https://ace.illinois.edu/directory/dallerba).
+
+This manuscript expands a Ricardian trade general equilibrium model to assess the current U.S. domestic food system vulnerabilities to supply chain disruptions. Our model incorporates assumptions about the heterogeneity of farmers' production and recognizes food processing plants as the main consumer of farmers' crops, isolating their substitution effect. In addition, we construct a ranking of U.S. states' relative comparative advantage in the domestic market for crops, which is decomposed into an expenditure and a productivity terms. Our ranking sheds light on the determinants of the initial composition of U.S. state's consumption sources and how they affect welfare losses in our food vulnerability simulations. We find that the distribution of welfare losses caused by disruptions in the existing supply chains depends on a state's ability to substitute imports for domestic production. In turn, a state's ability to substitute imports for domestic production is determined by its comparative advantage; the state's agricultural capacity adjusted by its operating expenses per harvested acre. We conduct an additional simulation to investigate the ability of the existing food supply chain to mitigate welfare losses from events that affect each states' ability to produce crops. 
 ### The effects of taxing sugary soft beverages in Mexico: A censored QUAI demand system  approach
 
 Paper with with Dr. [Diansheng Dong](https://www.ers.usda.gov/authors/ers-staff-directory/diansheng-dong/).
 
 The theoretical foundations and procedures to estimate demand systems to recover income- and price-elasticities have long been established; however, some streams of the literature do not account for all of the empirical implications of their datasets, leading to inconclusive results. The analysis of sin taxes on sugary soft beverages (SSB) is an exemplary case that has carried controversy in Latin-American countries. In Mexico, for instance, the federal government imposed a 20% price hike on SSB to curb its obesity epidemic in 2014, but obesity has continued increasing. This manuscript revisits the demand estimation applications aim to study the effectiveness of the sin tax with a censored Quadratic Almost Ideal Demand (QUAID) system. Previous studies find that SSB is an elastic good (a 10% price increase is associated with a greater than 10% reduction in quantity) with an own-price elasticity between -1.11 and -1.61, but our study finds that SSB is an inelastic good (a 10% price increase is associated with a 9.5% decrease in quantity). Our results suggest that SSB taxes are not as effective as previous research indicates, explaining the gap between actual obesity rates and expected obesity rates after the sin tax was imposed in Mexico.
-### Who benefits from local agriculture?
-
-Paper with prof. [William Ridley](https://ace.illinois.edu/directory/wridley) and prof. [Sandy Dall'Erba](https://ace.illinois.edu/directory/dallerba).
-
-Specialization in agriculture requires using farming practices that the general public perceive as unhealthy and detrimental to the environment. As a consequence, consumers' advocacy to shift food production back to local markets is gaining momentum. Based on a general equilibrium model of interstate crop trade, we conduct simulations to assess the impacts of different policies on the domestic food system. We analyze the welfare implications under a policy that improves local agricultural productivity. Then, we compare our results to those from an opposing policy recommendation that enhances food supply chains between U.S. states. The divergence between welfare impacts is driven by the benefits to net exporters of food with high levels of agricultural production. Our results suggest that policies that aim to improve local agricultural productivity may be regressive since they unambiguously benefit large agricultural producers.
-
 
 ### The Ricardian model with spatially varying impacts of climate change (submitted for publication consideration to the Review of Environmental Economics and Policy)
 
