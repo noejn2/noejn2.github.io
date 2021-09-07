@@ -22,3 +22,5 @@ vendor
 __latexindent_temp.tex
 *fdb_latexmk
 *.synctex.gz
+
+.vscode/
