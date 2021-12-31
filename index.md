@@ -3,6 +3,8 @@ layout: home
 title: "About me"
 ---
 
+It will be updated soon.
+
 I am a Ph. D. candidate in applied economics at the University of Illinois. I am interested in studying Food Systems and their implications for the environment and health with a focus on the NAFTA (now USMCA) region. I strive to study empirical issues from a structural modeling approach to inform public policy. I work with large datasets of climatological, land use, and economic indicators regarding U.S. farmers’ lands. I am also experienced in the estimation of price and income elasticities using censored AIDS and QUAIDS, counterfactual simulations using general equilibrium models of trade, and input-output structural decomposition analyses with regional and multi-regional databases.
 
 ### I will be attending NARSC 2021 Denver, Colorado to present my manuscript *Revisiting the impact of climate change on agriculture through spatially-varying and place-tailored Ricardian estimates*
