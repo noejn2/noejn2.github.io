@@ -28,7 +28,7 @@ plainwhite:
     - title: Create
       url: "https://publish.illinois.edu/createcenter/"
 
-theme: plainwhite
+theme: jekyll-theme-cayman
 
 plugins:
   - jekyll-seo-tag
