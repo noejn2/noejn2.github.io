@@ -25,8 +25,8 @@ plainwhite:
       url: "/current-research/current-research"
     - title: CV
       url: "/cv/cv_nava.pdf"
-    - title: Create
-      url: "https://publish.illinois.edu/createcenter/"
+    - title: Working papers
+      url: "/blog.md"
 
 theme: jekyll-theme-cayman
 
