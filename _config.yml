@@ -26,7 +26,7 @@ plainwhite:
     - title: CV
       url: "/cv/cv_nava.pdf"
     - title: Working papers
-      url: "/blog.md"
+      url: "blog.md"
 
 theme: jekyll-theme-cayman
 
