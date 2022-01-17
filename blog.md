@@ -3,7 +3,7 @@ layout: blog
 title: Working papers
 ---
 
-**Papers here are been considered in different (undisclosed) journals for publication consideration, so they are likely at different revision stages; CV only indicates *Under revision*. I will kindly provide you with the most recent version upon request.**
+**Papers here are being considered in different (undisclosed) journals for publication consideration, so they are likely at different revision stages. CV only indicates *Under revision*. I will kindly provide you with the most recent version upon request.**
 
 ### The effects of taxing sugary soft beverages in Mexico: A censored QUAI demand system  approach
 

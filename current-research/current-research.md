@@ -3,8 +3,7 @@ layout: home
 title: "Current Research"
 ---
 
-**Papers here have not been submitted to any journal. Papers here are considered *papers in preparation*. Upon request, I can consider providing conference slides or early drafts
-if available. Since these are papers under early stages, I greatly appreciate feedback and am open to collaborations**
+**Papers here have not been submitted to any journal. Papers here are considered *papers in preparation*. Upon request, I can consider providing conference slides or early drafts if available. Since these are papers under early stages, I greatly appreciate feedback and am open to collaborations**
 
 ### Poverty implications of the 2021 food price escalation in México
 
