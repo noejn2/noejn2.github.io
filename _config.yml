@@ -1,14 +1,14 @@
 title: Noé J Nava | noejn2
 author: Noé J Nava
-email: noejn2@illinois.edu
-description: I am a Ph.D candidate.
+email: Noe.Nava@usda.gov
+description: I am a microeconomist.
 show_excerpts: true # set to true to show excerpts on the homepage
 
 sass:
   sass_dir: _sass
 plainwhite:
   name: Noé J Nava
-  tagline: Ph.D. candidate
+  tagline: Microeconomist
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
 
