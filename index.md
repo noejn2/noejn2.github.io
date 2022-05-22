@@ -5,7 +5,7 @@ title: "About me"
 
 Model-based microeconomist studying food systems and their implications for farmers' welfare and human health.
 
-I joined the USDA Economic Research Service as a research agricultural economist for the Agricultural Policy & Models Branch in the Market & Trade Economics Division. I hold a Ph.D. in Agricultural and Applied Economics from the University of Illinois, and a B.A. in Mathematical Economics from the California State University.
+I joined the USDA Economic Research Service as a research agricultural economist for the Agricultural Policy & Models Branch in the Market & Trade Economics Division. I hold a Ph.D. in Agricultural and Applied Economics from the University of Illinois.
 
 My work explores the opportunities and limitations of methodological advancements to accurately reflect food markets. I strive to understand how market assumptions have implications for the Mathematical modeling of consumers and producers. For this purpose, I employ computational methodologies such as Bayesian methods, specific-case parametrization of log-likelihood functions, and G.E. simulations to inform food policy. 
 
