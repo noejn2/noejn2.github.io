@@ -1,6 +1,6 @@
 ---
-layout: blog
-title: Working papers
+layout: home
+title: "Working papers"
 ---
 
 **Papers here are being considered in different (undisclosed) journals for publication consideration, so they are likely at different revision stages. CV only indicates *Under revision*. I will kindly provide you with the most recent version upon request.**
