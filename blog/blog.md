@@ -5,12 +5,6 @@ title: Working papers
 
 **Papers here are being considered in different (undisclosed) journals for publication consideration, so they are likely at different revision stages. CV only indicates *Under revision*. I will kindly provide you with the most recent version upon request.**
 
-### The effects of taxing sugary soft beverages in Mexico: A censored QUAI demand system  approach
-
-Paper with with [Diansheng Dong](https://www.ers.usda.gov/authors/ers-staff-directory/diansheng-dong/).
-
-The theoretical foundations and procedures to estimate demand systems to recover income- and price-elasticities have long been established; however, some streams of the literature do not account for all of the empirical implications of their datasets, leading to inconclusive results. The analysis of sin taxes on sugar-sweetened beverages (SSB) is an exemplary case that has carried controversy in Latin-American countries. In México, for instance, the federal government imposed a 20% price hike on SSB to curb its obesity epidemic in 2014, but obesity has continued increasing. This manuscript revisits the demand estimation applications aim to study the effectiveness of the sin tax with a censored Quadratic Almost Ideal Demand (QUAID) system. Previous studies find that SSB is an elastic good (a 10% price increase is associated with a greater than 10% reduction in quantity) with an own-price elasticity between -1.11 and -1.61. By employing our rigorous estimation procedure, our study finds that SSB is an inelastic good with an own-price elasticity between -0.83 and -0.98. Our results suggest that SSB taxes are not as effective as previous research indicates, explaining the gap between actual obesity rates and expected obesity rates after the sin tax was imposed in México.
-
 ### A model of the U.S. food system: What are the determinants of the state vulnerabilities to production shocks and supply chain disruptions?
 
 Paper with [William Ridley](https://ace.illinois.edu/directory/wridley) and [Sandy Dall'Erba](https://ace.illinois.edu/directory/dallerba).
