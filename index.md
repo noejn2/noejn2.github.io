@@ -9,7 +9,7 @@ I joined the USDA Economic Research Service as a research agricultural economist
 
 My work explores the opportunities and limitations of methodological advancements to accurately reflect food markets. I strive to understand how market assumptions have implications for the Mathematical modeling of consumers and producers. For this purpose, I employ computational methodologies such as Bayesian methods, specific-case parametrization of log-likelihood functions, and G.E. simulations to inform food policy. 
 
-Outside economics, I am a geo-politics nerd (including non-fictional regions) who enjoys hiking and travel, and a podcast listener who walks from 4pm to 5pm every day. In Winters, I hibernate, but mostly I remote-work and play video games. Currently reading Aubrey Clayton's *Bernoulli's Fallacy: Statistical Illogic and the Crisis of Modern Science*.
+Outside economics, I am a geo-politics nerd (including non-fictional regions) who enjoys hiking and travel, and a podcast listener who walks from 4pm to 5pm every day. In Winters, I hibernate, but mostly I remote-work and play video games. Currently reading Daniel Kahneman''s *Thinking, Fast and Slow*.
 
 #### I will be presenting my work on the poverty implications of the recent food price escalation in México, *Alleviating the poverty implications of the 2021 food price escalation in México*, at the AAEA 2022 in Anaheim, CA.
 
