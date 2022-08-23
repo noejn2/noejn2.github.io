@@ -21,7 +21,7 @@ plainwhite:
   navigation:
     #- title: About me
     #  url: "https://noejn2.github.io/"
-    - title: Research agenda
+    - title: Research Agenda
       url: "/current-research/current-research"
     - title: CV
       url: "/cv/cv_nava.pdf"

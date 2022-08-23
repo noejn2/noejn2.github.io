@@ -1,17 +1,9 @@
 ---
 layout: home
-title: "Working papers"
+title: "Blog"
 ---
-**Papers here are being considered in different (undisclosed) journals for publication consideration, so they are likely at different revision stages. CV only indicates *Under revision*. I will kindly provide you with the most recent version upon request.**
+## A quote by *The Economist* describing Daniel Kahneman's *Thinking, Fast and Slow*:
+### August 23, 2022
 
-### A model of the U.S. food system: What are the determinants of the state vulnerabilities to production shocks and supply chain disruptions?
+“As Darwin knocked humans off their biological perch, Mr. Kahneman has shown that we are not the paragons of reason we assume ourselves to be.”
 
-Paper with [William Ridley](https://ace.illinois.edu/directory/wridley) and [Sandy Dall'Erba](https://ace.illinois.edu/directory/dallerba).
-
-We adapt a Ricardian general equilibrium model to the setting of U.S. domestic agri-food trade to assess states’ vulnerability to adverse production shocks and supply chain disruptions. To this end, we analyze how domestic crop supply chains depend on fundamental state-level comparative advantages – which reflect underlying differences in states’ cost-adjusted productivity levels – and thereby illustrate the capacity of states to adapt to and mitigate the impacts of such disruptions to the U.S. agricultural sector. Based on the theoretical framework and our estimates of the model’s structural parameters obtained using data on U.S. production, consumption, and domestic trade in crops, we undertake counterfactual simulations to characterize the welfare implications of counterfactual scenarios depicting disruptions to (1) states’ agricultural productive capacity, and (2) interstate supply linkages. Our results emphasize that the distributional impacts of domestic supply chain disruptions hinge on the extent of individual states’ agricultural productive capacities, and that the capacity for states to mitigate the impacts of adverse production shocks through trade relies on the degree to which states are able to substitute local production shortfalls by sourcing crops from other states.
-
-### Revisiting the impact of climate change on agriculture through spatially-varying and place-tailored Ricardian estimates
-
-Paper with [Sandy Dall'Erba](https://ace.illinois.edu/directory/dallerba), [Chang Cai](https://ace.illinois.edu/directory/ccai5) and [A. Stewart Fotheringham](https://sgsup.asu.edu/stewart-fotheringham).
-
-The Ricardian framework has been widely used to study the impact of climate change on agriculture across US counties over the past few decades. While the spatial heterogeneity of climate change is well-accepted, the literature struggles to reach an agreement on how to model it, hence leading to a wide range of forecasted impacts. This paper employs Multiscale Geographically-Weighted-Regression (MGWR) to avoid setting an a priori definition of heterogeneity and to generate county-specific marginal effects of climate change impacts. We start with a cross-validation exercise that demonstrates the superiority of MGWR over previous specifications. The local parameter estimates derived from MGWR are then used to forecast changes in farmland value due to expected 2038-2070 climate conditions. Results reveal an expected national average loss in farmland value that is substantially larger than the losses predicted in previous studies. We attribute the divergence to unspecified heterogeneity that leads to a downward bias in farmland price forecasts. While previous studies find a large number of counties benefiting from climate change, our results indicate that only a total of 24 counties – mostly in Texas - will experience gains. Our place-specific marginal effects will help guide the development of place-tailored mitigation and adaptation strategies to climate change.
