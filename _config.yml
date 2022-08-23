@@ -21,11 +21,11 @@ plainwhite:
   navigation:
     #- title: About me
     #  url: "https://noejn2.github.io/"
-    - title: Current research
+    - title: Research agenda
       url: "/current-research/current-research"
     - title: CV
       url: "/cv/cv_nava.pdf"
-    - title: Working papers
+    - title: Blog
       url: "/wk/wk"
 
 theme: jekyll-theme-cayman
