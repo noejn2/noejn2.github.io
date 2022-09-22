@@ -1,22 +1,22 @@
 ---
 layout: home
-title: "Current Research"
+title: "Research Agenda"
 ---
 
-**Papers here have not been submitted to any journal. Papers here are considered *papers in preparation*. Upon request, I can consider providing conference slides or early drafts if available. Since these are papers under early stages, I greatly appreciate feedback and am open to collaborations**
+## Research statement
 
-### A Bayesian model to study the role of weather on crop yield potential
+I am a model-based microeconomist studying food systems and their implications for farmers' welfare and human health in the USDA Economic Research Service. I hold a Ph.D. in Agricultural and Applied Economics from the University of Illinois, and my thesis received the *Outstanding Ph.D. Dissertation* award in 2021. My work explores the opportunities and limitations of methodological advancements to accurately reflect food markets. I strive to understand how market assumptions have implications for the Mathematical modeling of consumers and producers. For this purpose, I employ computational methodologies such as Bayesian methods, specific-case parametrization of log-likelihood functions, and G.E. simulations to inform food policy. Currently, my research agenda is split into three sections: Methodological improvements of baseline models,  agricultural trade, and consumers' welfare.
 
-Solo paper.
+### Methodological improvements of baseline models
 
-### Quantifying the food insecurities needs from price escalations among Mexican households
+Advancing methodological practices in the ERS is the primary goal of my current research agenda. Baseline projections, as they are classified for being used as *base* for the evaluation of policy, are used by several federal agencies, such as the Congressional Office Budget, and inform Congress and the White House decision-making. Baseline projections are developed by a combination of empirical methods and judgment-based analyses of experts from 10 different USDA agencies. Therefore, it is paramount to evaluate and improve the performance of the existing quantitative techniques. 
 
-Paper with with [Benjamin D.K. Wood](https://sites.google.com/view/bdkwood/) and [Rafael Garduño-Rivera](https://scholar.google.com/citations?user=Ju4Y-EwAAAAJ&hl=en/).
+I evaluate existing models on their replicability and reproducibility capacity, and adherence to microeconomic theory. In collaboration with other ERS economists and academics, we have succesfully obtained funding for two different projects to advance our research and development. First, we secured $375,000 to hire two graduate students and a post-doctoral researcher at the Purdue University in the form of a Cooperative Research Agreement Grant with Assistant Professor of the Agricultural Economics Department, Diego Soares Cardoso. From this partnership, we will translate baseline models from Fortran to open source and freely distributed statistical languages, including R and Julia, contributing to our commitment to the replicability and reproducbility of baseline. In addition, we will propose methodological advacements of baseline that are theoretically consistent to ensure that estimates (e.g., elasticities) reflect rational producer behavior. A recent work with an ERS economist and a Summer intern from Kansas State University will serve as the stepping-stone: *Towards theoretically consistent ERS baseline models: The effect of crop prices and land expansions on land allocation*. In this work, we develop a theoretically consistent estimable  model of land allocation that consists of structural relationships between farmers' profits, output prices and land endowments.
 
-### Tracing U.S. county-to-county domestic trade flows in grains
+USDA stakeholders have expressed increasing interest in updating baseline practice to account for recent improvements on the modelling of the interaction between agro-economic outcomes and climate, so a second grant of $30,000 will provide me with the resources to achieve this outcome. The stated end-goal of this grant proposal is to develop a database of historical and forecasted daily temperature and precipitation to be used in baseline. This database will combine historical realizations of weather with climate forecasts adopted in the Intergovernmental Panel on Climage Change (IPCC) report. Currently, the processing of climate forecasts is cubersome and computatially intensive, so baseline modellers have not included IPCC forecasts in their projections. To circumvent this problem, we propose creating a lambda function with AWS web services whose only two inputs are a shapefile with boundaries required and a time-interval (often 10-20 years into the future). Having constructed these tools, I will offer workshops to educate baseline modellers with state-of-the-art techniques to process temperature and precipitation and include them in their econometric and simulation analyses. This proposal was motivated by my work *The probabilistic role of climate change on crop yield potential* in which I IPCC forecasts to investigate the role of climate change on the capacity of U.S. counties to produce corn and soybeans, using crop-specific measures of heat and hunmidity to improve forecasts.
 
-Paper with [William Ridley](https://ace.illinois.edu/directory/wridley) and [Sandy Dall'Erba](https://ace.illinois.edu/directory/dallerba).
+#### Agricultural trade
 
-### Does international trade capitalize into U.S. farmland prices?
 
-Paper with [William Ridley](https://ace.illinois.edu/directory/wridley).
+
+### Consumers' welfare
