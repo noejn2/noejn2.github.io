@@ -1,0 +1,773 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{article}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+%\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{afterpage}
+\newlength{\myMheight}
+\usepackage{datetime}
+\settoheight{\myMheight}{M}
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em} %1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%
+        {\begin{enumerate}{}{%
+%        {\begin{list}{}{%
+       \setlength{\leftmargin}{\bibhang}%
+       \setlength{\itemindent}{-\leftmargin}%
+       \setlength{\itemsep}{\bibsep}%
+       \setlength{\parsep}{\z@}%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{enumerate}\vspace{-.6\baselineskip}}
+%        {\end{list}\vspace{-.6\baselineskip}}
+\makeatother
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=1in,               % 1 inch margins
+            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=30.5mm,    % Length of section titles
+%            marginparsep=1.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+\setlength{\parindent}{0in}
+
+\usepackage[shortlabels]{enumitem}
+
+%% Reference the last page in the page number
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.5}
+
+%% SHOW ONLY MONTH AND YEAR
+\renewcommand{\today}{\ifcase \month \or January\or February\or March\or %
+April\or May \or June\or July\or August\or September\or October\or November\or %
+December\fi \number \year} 
+
+%%%%%%%%%%%%%%%%%%%%%%%% COLOR OF HYPERLINKS %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[svgnames,dvipsnames]{xcolor}
+%% DIGITAL COPY
+%\hypersetup{colorlinks,breaklinks,linkcolor=SteelBlue,urlcolor=SteelBlue,anchorcolor=SteelBlue,citecolor=SteelBlue}
+%% PRINT COPY
+\hypersetup{colorlinks,breaklinks,linkcolor=black,urlcolor=black,anchorcolor=black,citecolor=black}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+% (optional argument typesets an object right-justified across from name
+%  as well)
+%
+% Usage: \makeheading{name}
+%        OR
+%        \makeheading[right_object]{name}
+%
+% Place at top of document. It should be the first thing.
+% If ``right_object'' is provided in the square-braced optional
+% argument, it will be right justified on the same line as ``name'' at
+% the top of the CV. For example:
+%
+%       \makeheading[\emph{Curriculum vitae}]{Your Name}
+%
+% will put an emphasized ``Curriculum vitae'' at the top of the document
+% as a title. Likewise, a picture could be included:
+%
+%   \makeheading[\includegraphics[height=1.5in]{my_picutre}]{Your Name}
+%
+% the picture will be flush right across from the name.
+\newcommand{\makeheading}[2][]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+             {\large \bfseries #2 \hfill #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+\renewcommand{\section}[1]{\pagebreak[3]%
+    \hyphenpenalty=10000%
+    \vspace{1.3\baselineskip}%
+    \phantomsection\addcontentsline{toc}{section}{#1}%
+    \noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\raggedright #1}}}%
+    \vspace{-\baselineskip}\par}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*]}{\end{itemize}%
+         \vspace{-.6\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+        {\end{itemize}}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{loneinnerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+        {\end{itemize}\vspace{-.6\baselineskip}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+% Uses hyperref to link DOI
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+% For \url{SOME_URL}, links SOME_URL to the url SOME_URL
+%\providecommand*\url[1]{\href{#1}{#1}}
+% Same as above, but pretty-prints SOME_URL in teletype fixed-width font
+\renewcommand*\url[1]{\href{#1}{\texttt{#1}}}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS
+\providecommand*\email[1]{\href{mailto:#1}{#1}}
+% Same as above, but pretty-prints ADDRESS in teletype fixed-width font
+%\renewcommand*\email[1]{\href{mailto:#1}{\texttt{#1}}}
+
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    \TeX}}
+\providecommand\BibTeX{{B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    \TeX}}
+\providecommand\Matlab{\textsc{Matlab}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhfoffset[L]{3cm} % left extra length
+%\fancyhfoffset[R]{1cm} % right extra length
+\rhead{\emph{\large Curriculum Vitae}}
+\lhead{\large \bfseries \href{https://twitter.com/normalEconomist}{Noé J Nava}}
+\rfoot{\today \hspace*{1.25in} }
+\cfoot{\hspace*{-1.35in} Page \arabic{page} of \protect\pageref*{LastPage}}
+\renewcommand{\headrulewidth}{1pt} % header line width
+%\renewcommand{\headheight}{0.25in} % header line width
+\setlength{\headsep}{0.2in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contact Information}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table.
+%
+% ALSO: \rcollength is the width of the right column of the table
+%       (adjust it to your liking; default is 1.85in).
+%
+\newlength{\rcollength}\setlength{\rcollength}{1.6in}%
+
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+            1 (217) 305-2300                \\%     &  805 Pennsylvania  Av. \\
+            \email{noejnava2@gmail.com} \\%  &  Kansas City, MO 64105   \\
+            \href{https://noejn2.github.io/}{https://noejn2.github.io/} &  \\
+[1em]
+Citizenship: United States of America and México      & \\
+\end{tabular}
+
+\halfblankline
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Positions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{USDA Economic Research Service} \hfill 2022 - \textit{present}
+\begin{innerlist}
+	\item[] Research Agricultural Economist
+	\item[] Market and Trade Economics Division,
+	\item[] Agricultural and Policy Models branch
+\end{innerlist}
+
+\halfblankline
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Ph.D., Applied Economics} \hfill  2021
+        \begin{innerlist}
+        \item[] University of Illinois Urbana-Champaign, IL
+        \item[] Advisor: William Ridley
+        \item[] Dissertation: Three Essays on Agricultural and Consumer Economics,
+        \item[] \textit{Outstanding Doctoral Dissertation Award}
+        \item[] Committee: William Ridley (chair), Sandy Dall’Erba, Yilan Xu, and Rafael Garduño-Rivera
+        \end{innerlist}
+        
+\halfblankline
+
+\textbf{B.S., Mathematical Economics} \hfill  2016
+   \begin{innerlist}
+                \item[] California State University, San Bernardino, San Bernardino, CA
+                \item[] Advisor: Kazim Konyar
+                \item[]  \textit{Summa Cum Laude}
+    \end{innerlist}
+
+\blankline
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research \\ Interests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}{0.7\linewidth}
+\textbf{Methods}
+\begin{innerlist}
+	\item[] Bayesian data analysis 
+	\item[] General equilibrium models
+	\item[] Structural econometrics
+\end{innerlist}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+\textbf{Fields}
+\begin{innerlist}
+	\item[] Agricultural production
+	\item[] Consumption economics
+	\item[] Food systems
+\end{innerlist}
+\end{minipage}
+
+\blankline
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Journal Articles}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-.29cm} %% DEPENDING ON FONT SIZE, THIS WILL ALIGN THE SECTION WITH THE FIRST ITEM
+
+\begin{bibsection}
+		
+	\item {\textit{Land competition and poverty effects from the Mexico's proposal to ban Genetically Engineered corn.}}
+	\textbf{American Journal of Agricultural Economics} 106(3): 1300-1325.
+	\\with Jayson Beckman, Angelica Williams, and Steven Zahniser.
+	\\doi:\doilink{10.1111/ajae.12463}
+	
+	\item {\textit{Welfare effects of retail food price inflation during the COVID-19 pandemic on Mexican households.}}
+	 (Accepted for the special issue of the \textbf{Journal of Agriculture and Food Industrial Organization} on the causes and consequences of retail food price inflation)
+	\\ with Benjamin D.K. Wood, and Rafael Garduño-Rivera.
+		
+	\item \textit{Estimation of the Value-Added/Intermediate Input Substitution Elasticities Consistent with the GTAP Data.} 2023.
+	\textbf{Journal of Global Economic Analysis} 8(2): 134-158.
+	\\with Jayson Beckman, and Maros Ivanic.
+	\\doi:\doilink{10.21642/JGEA.080204AF}
+	
+	   \item \textit{A model of the U.S. food system: What are the determinants of the state vulnerabilities to production shocks and supply chain disruptions?} 2023.  \textbf{Agricultural Economics} 54(1): 95-109. \footnote{Most Outstanding Second Year Research Paper at University of Illinois at Urbana-Champaign-ACE 2020.} \footnote{\href{https://www.wrsaonline.org/newsite/tiebout-prize/}{The Charles M. Tiebout Prize in Regional Science 2021}.}  
+	\\ with William Ridley, and Sandy Dall'Erba.
+	\\doi:\doilink{10.1111/agec.12750}
+	%\\ \href{https://create.ace.illinois.edu/files/2022/02/Nava_ridley_dallerba_CREATE.pdf}{CREATE discussion paper}
+	
+	\item \textit{The impact of taxing sugary-sweetened beverages in México: A censored QUAI demand system approach}. 2022.
+	\textbf{Journal of Agricultural and Applied Economics Association} 1(1): 18-32.
+	\\ with Diansheng Dong.
+	\\doi:\doilink{10.1002/jaa2.6}
+	
+    \item \textit{U.S. interstate trade will mitigate the negative impact of climate change on crop profit}. 2021.
+    \textbf{American Journal of Agricultural Economics} 103(5): 1720-1741. 
+        \\ with Sandy Dall'Erba, and Zhangliang Chen.
+        \\doi:\doilink{10.1111/ajae.12204}
+
+    \item \textit{The impacts of agroforestry on agricultural productivity, ecosystem services, and human well‐being in low- and middle-income countries: An evidence and gap map}. 2020.
+    \textbf{Campbell Systematic Reviews} 16(1): e1066.
+        \\ with Daniel C. Miller, Pablo J. Ordoñez, Sarah E. Brown, Samantha Forrest, Karl Hughes, and Kathy Baylis.
+        \\doi:\doilink{10.1002/cl2.1066}
+
+    \item \textit{The conduits and barriers to reentry for formerly incarcerated individuals in San Bernardino}. 2018.
+    \textbf{Journal of Prison Education and Reentry} 5(1): 2-17.
+        \\ with Annika Anderson, and Patricia Cortez.
+        \\doi:\doilink{10.25771/sdf0-1631}
+\end{bibsection}
+
+\blankline
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{U.S. Department of Agriculture,  \\ Economics Research Service}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-.29cm} %% DEPENDING ON FONT SIZE, THIS WILL ALIGN THE SECTION WITH THE FIRST ITEM
+
+\begin{bibsection}
+		
+	\item {\textit{Estimating the market and trade implications from climate-Induced corn and soybean yield changes for the U.S.}}  2023
+	\textbf{Economics Research Report} ERR-324: 31pp.
+	\\ with Jayson Beckman, and Maros Ivanic.
+	
+	 \item \textit{Warming temperatures in U.S. Corn Belt expected to continue into next decade.}
+	\\ \href{https://www.ers.usda.gov/data-products/chart-gallery/gallery/chart-detail/?chartId=108037}{Charts of Note, December 5, 2023}
+	
+	
+\end{bibsection}
+
+\blankline
+\blankline
+\blankline
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Working \\ Papers}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-.29cm} %% DEPENDING ON FONT SIZE, THIS WILL ALIGN THE SECTION WITH THE FIRST ITEM
+
+\begin{bibsection}
+	
+	\item {\textit{Agro-climatic patterns for the Corn Belt towards the middle of the century.}} 
+	\\with Eric Njuki, Jayson Beckman, and Maros Ivanic.
+	
+	\item {\textit{The Impact of International Demand for Cereals on U.S. Crop Land Appreciation: A Model Implied Instrumental Variable Approach}} 
+	\\with William Ridley, and Stephen Morgan.
+	
+	\item {\textit{Estimation of the factor transformation elasticities consistent with the GTAP data.}} 
+	\\with Jayscon Beckman, and Maros Ivanic.
+	
+     \item {\textit{Heterogenous patterns of crop yield growth stagnation across U.S. counties in the next decade}}
+     \\ Solo paper.
+       
+       \item {\textit{Incorporating the Land Allocation System  into the GTAP framework}}(R\&R) 
+       \\with Kristiina Ala-Kokko, Jayson Beckman, and Maros Ivanic.
+		
+		\item {\textit{Does trade openness affect global grain supply response?}}
+		\\with Yacob Zereyesus, Jennifer Kee, Stephen Morgan, Nathan Hendricks, Michael Johnson, Lila Cardell, Jeremy Jelliffe, and Walter Acpangan.
+		
+		%\item {\textit{Global Grain Supply Forecasting}}
+		%\\with Walter Acpangan, Nathan Hendricks, Yacob Zereyesus, Jennifer Kee, Jeremy Jelliffe, Stephen Morgan, and Lila Cardell.
+		
+		 \item \textit{Revisiting the impact of climate change on agriculture through spatially-varying and place-tailored Ricardian estimates.}
+		\\ with Sandy Dall'Erba, Chang Cai, and A. Stewart Fotheringham.
+		\\ \href{https://create.ace.illinois.edu/files/2022/02/CREATE_WP22-02.pdf}{CREATE discussion paper}
+\end{bibsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Papers in Preparation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-.29cm} %% DEPENDING ON FONT SIZE, THIS WILL ALIGN THE SECTION WITH THE FIRST ITEM
+
+\begin{bibsection}
+	
+	\item {\textit{Is agricultural insurance a safety net or a net of complacency amidst adaptation to extreme weather events?}} 
+	\\with Francis Tsiboe, Dylan Turner, Katherine Baldwin, and Sharon Raszap.
+	
+	\item {\textit{Tracing U.S. county-to-county domestic trade flows in grains.}} 
+	\\with William Ridley, Sandy Dall'Erba, Jian Zou, Youning Chen, and Christa Court.
+
+	\item {\textit{Designing policies to achieve healthy and sustainable diets}} 
+	\\with Grace Melo-Guerrero.	
+
+\end{bibsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fellowships,  Grants and Scholarships}% The $^*$ indicates direct responsability
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{innerlist}
+	\item The impact of climate change on agricultural production, productivity, \\
+	and trade (\$403,152) 
+	\hfill 2023
+	
+	\item Improving the capabilities of global trade models to analyze \\
+	changes in land use/land cover and green house emissisions (\$280,000) 
+	\hfill 2023
+	
+	\item A global agricultural supply-demand-climate-trade model \\
+	calibrated to Baseline  (\$375,000) 
+	\hfill 2022
+	
+	\item Towards a data hub of global daily weather forecasts for \\ 
+	the ERS (\textbf{PI}) (\$30,000) 
+	\hfill 2022%$^*$
+	
+	\item ERS' international supply forecasting (\$30,000)  
+	\hfill 2022
+	
+	\item International food consumption patterns-implications \\
+	for global food security and trade (\$25,000) 
+	\hfill 2022
+	
+	\item The Charles M. Tiebout Prize in Regional Science (\$1,000) 
+	\hfill 2021
+	
+	\item Cleo Fitzsimmons Award  (\$500) 
+	\hfill 2020
+	
+	\item Agricultural and Consumer Economics Department Grant (\$400) 
+	\hfill 2019
+	
+	\item Marshall Scott Fellowship (\$4,877.85) 
+	\hfill 2018
+	
+	\item Brockson Fellowship (\$3,902.28) \hfill 2017
+	
+	\item The Proactive Recruitment in Introductory \\
+	Science and Mathematics Travel Grant (\$1,000) 
+	\hfill 2016
+	
+	\item The Proactive Recruitment in Introductory \\
+	Science and Mathematics Research Grant (\$2,000) 
+	\hfill 2015
+	
+	\item The John \& June Kennedy Economics Scholarship (\$1,500) 
+	\hfill 2015
+	
+	
+\end{innerlist}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Awards and Honors}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{innerlist}
+	
+	\item Outstanding Doctoral Dissertation Award, University of \\
+	Illinois at Urbana-Champaign-ACE \hfill 2021
+	
+	\item The Charles M. Tiebout Prize in Regional Science 
+	\hfill 2021
+	
+	\item Farm foundation Agricultural Scholar 
+	\hfill 2021
+	
+	\item Most Outstanding Second Year Research Paper, University of \\
+	Illinois at Urbana-Champaign-ACE \hfill 2020
+	
+\end{innerlist}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Teaching and Mentorship Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Mentor at} ERS Summer internship
+\begin{innerlist}
+	\item[] Kristiina Ala-Kokko (Kansas State University) \hfill 2022
+\end{innerlist}
+
+\smallskip
+\smallskip
+\smallskip
+
+\textbf{Teaching Assistant}
+\begin{innerlist}
+	\item[] ACE 240: Personal Financial Planning \hfill FA19
+	\item[] Instructor: Paul B Stoddard, Senior Lecturer \\
+	\hspace*{0.5cm} \textit{Lecture}: 160 students \\
+	\hspace*{0.5cm} University of Illinois at Urbana-Champaign, IL \\
+	\hspace*{0.5cm} Undergraduate Credit: 4 Hours. \\
+\end{innerlist}
+
+\smallskip
+
+\begin{innerlist}
+	\item[] ACE 231: Food and Agribusiness Management \hfill SP18
+	\item[] Instructor:Paul B Stoddard, Senior Lecturer \\
+	\hspace*{0.5cm} \textit{Lecture}: 160 students \\
+	\hspace*{0.5cm} University of Illinois at Urbana-Champaign, IL \\
+	\hspace*{0.5cm} Undergraduate Credit: 4 Hours. \\
+\end{innerlist}
+
+\smallskip
+
+\begin{innerlist}
+	\item[] ACE 341AMM: Issues in Agribusiness Markets and Management \hfill FA17
+	\item[] Instructor: Paul B Stoddard, Senior Lecturer \\
+	\hspace*{0.5cm} \textit{Lecture}: 20 students \\
+	\hspace*{0.5cm} University of Illinois at Urbana-Champaign, IL \\
+	\hspace*{0.5cm} Undergraduate Credit: 3 Hours.
+\end{innerlist}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research in the News}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-.29cm} %% DEPENDING ON FONT SIZE, THIS WILL ALIGN THE SECTION WITH THE FIRST ITEM
+
+\begin{bibsection}
+	 \item {\href{https://www.dtnpf.com/agriculture/web/ag/blogs/ag-policy-blog/blog-post/2023/10/04/climate-impacts-corn-soybean-yields}{\textit{Climate Impacts on Corn and Soybean Yields by Mid-2030s} in Progressive Farmer}}
+	
+    \item {\href{https://www.wcia.com/news/climate-change-is-real-researchers-warn-extreme-weather-events-could-impact-illinois-agriculture/}{\textit{``Climate change is real;'' Researchers warn extreme weather events could impact Illinois agriculture} in WCIA.com}}
+
+    \item {\href{http://jaysonlusk.com/blog/2021/2/25/trade-as-insurance}{\textit{Trade Insurance} in Jayson Lusk, Food and Agricultural Economist, personal blog.}}
+\end{bibsection}
+
+\halfblankline
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research Assistantships}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Interstate Trade as Mitigating Factor for the Effects of Climate Change on Illinois Agriculture}
+\begin{innerlist}
+\item[] January 2020 - December 2021 \\
+        How do the interstate trade flows of Illinois farm products respond to extreme weather events? \\
+        University of Illinois at Urbana-Champaign, IL \\
+        Supervisor: Prof. William Clifton Ridley
+\end{innerlist}
+
+\halfblankline
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Work Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Intern}
+\begin{innerlist}
+	\item[] Department of Agriculture, U.S., Economic Research \\
+    Service \hfill Summer 2021
+	\begin{innerlist}
+	\item[] Market \& Trade Economics Division
+	\item[] Agricultural Policy and Models Branch
+    \item[] Kansas City, MO   
+    \end{innerlist}
+\end{innerlist}
+
+\textbf{Intern}
+\begin{innerlist}
+	\item[] Department of Agriculture, U.S., National Agricultural \\
+	Statistics Service \hfill 2016 - 2017
+	\begin{innerlist} 
+	\item[] Environmental, Economics and Demographics
+    \item[] Washington, DC 
+    \end{innerlist}
+\end{innerlist}
+
+\smallskip
+
+\textbf{Intern}
+\begin{innerlist}
+	\item[] Department of Agriculture, U.S., Rural Development \hfill 2015 - 2016 
+	\begin{innerlist}
+	\item[] Rural Housing Service
+    \item[] Washington, DC 
+    \end{innerlist}
+\end{innerlist}
+
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Selected Presentations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{The Impact of International Demand for Agricultural Products on U.S. Cropland Appreciation: A Model-Implied Instrumental Variable Approach}
+\begin{innerlist}
+	\item[] The International Agricultural Trade Research Consortium (IATRC) \hfill 2023
+\end{innerlist}
+
+\textbf{Heterogeneous Patterns of Crop Yield Growth Stagnation across U.S. Stagnation across U.S. Counties in the Next Decade}
+\begin{innerlist}
+	%\item[] National Bureau of Economic Research (NBER) \hfill 2023
+	%\item[] Theme: Distributional Impacts of Climate Change in the Agricultural Sector
+	\item[] Agricultural \& Applied Economics Association (AAEA) \hfill 2023
+	\item[] Track Session: Studying Climate Change Impacts from \\
+	 Different Methodological Perspectives
+\end{innerlist}
+
+\textbf{The probabilistic role of climate change on crop yield potential}
+\begin{innerlist}
+\item[] FCSM Research \& Policy Conference (FCSM) \hfill 2022
+\end{innerlist}
+
+\textbf{The impact of taxing sugar-sweetened beverages in México: A censored QUAI demand system}
+\begin{innerlist}
+	\item[] Agricultural \& Applied Economics Association (AAEA) \hfill 2022
+		\item[] Track Session: Identification in Demand Estimations
+\end{innerlist}
+
+\textbf{A model of U.S. domestic crop trade to study state's food vulnerability to supply chain disruptions} \footnote{Previously titled \textit{Who benefits from local agriculture?}}
+\begin{innerlist}
+    \item[] Agricultural \& Applied Economics Association (AAEA) \hfill 2021
+
+	\item[] Western Regional Science Association (WRSA) \hfill 2021
+  
+	\item[] North American Regional Science Council (NARSC) \hfill 2020 
+\end{innerlist}
+
+\smallskip
+
+\textbf{Revisiting the impact of climate change on \\
+ agriculture through spatially-varying and place-tailored \\
+ Ricardian estimates}
+\begin{innerlist}
+	\item[] North American Regional Science Council (NARSC) \hfill 2021
+	
+    \item[] Workshop RED in Mexico: Challenges of a New Era \hfill 2018
+\end{innerlist}
+
+%\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{References}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\href{https://ace.illinois.edu/directory/wridley}
+{William Clifton Ridley, Ph.D.}
+\begin{innerlist}
+    \item[] Professor, Department of Agricultural and Consumer Economics \\
+            University of Illinois Urbana-Champaign, IL \\
+	        wridley@illinois.edu
+\end{innerlist}
+\halfblankline
+
+\href{https://ace.illinois.edu/directory/dallerba}
+{Sandy Dall'Erba, Ph.D.}
+\begin{innerlist}
+	\item[] Professor, Department of Agricultural and Consumer Economics \\
+	University of Illinois Urbana-Champaign, IL \\
+	dallerba@illinois.edu
+\end{innerlist}
+\halfblankline
+
+\href{https://scholar.google.com/citations?user=Ju4Y-EwAAAAJ&hl=en}
+{Rafael Garduño-Rivera, Ph.D.}
+\begin{innerlist}
+	\item[] Professor, School of Economic and Administrative Sciences \\ 
+	Universidad Panamericana, México \\
+	rgardunor@up.edu.mx
+\end{innerlist}
+\halfblankline
+
+%\href{https://www.ers.usda.gov/authors/ers-staff-directory/diansheng-dong/}
+%{Diansheng Dong, Ph.D.}
+%\begin{innerlist}
+%   \item[] Senior Economist \\
+%            US Department of Agriculture, Economic Research Service  \\
+%	        diansheng.dong@usda.gov
+%\end{innerlist}
+%\halfblankline
+
+%\href{https://www.ers.usda.gov/authors/ers-staff-directory/jayson-beckman/}
+%{Jayson Beckman, Ph.D.}
+%\begin{innerlist}
+%  \item[] Research Agricultural Economist \\
+%            US Department of Agriculture, Economic Research Service  \\
+%	        jayson.beckman@usda.gov
+%\end{innerlist}
+%\halfblankline
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Programming}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{innerlist}
+    \item[] Julia, \LaTeX , Markdown, Python, R, Stan, Stata, \& SQL.
+\end{innerlist}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Languages}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{innerlist}
+	\item[] English  \& Spanish.
+\end{innerlist}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Service and Professional Activities}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Journal Refereeing}
+\begin{innerlist}
+	\item[] American Journal of Agricultural Economics (4); Economic Modelling (1); Environmental Research Letters (1); Journal of Agricultural and Applied Economics Association (1) ; Nature Food (1); Organisation for Economic Co-Operation and Development (OECD) (1); U.S. Global Change Research Program (USGCRP) (1); World Development (1).
+\end{innerlist}
+
+\textbf{USDA - Economics Research Service}
+\begin{innerlist}
+	\item[] Member, ERS Diversity Equity Inclusion and Accessibility (DEIA) Council
+	\item[] Member, ERS Modeling Team Committee
+	\item[] Member, ERS Brownbag Series Committee
+\end{innerlist}
+
+\textbf{Abstract Reviewer}
+\begin{innerlist}
+	\item[] AAEA Annual Meeting, 2024.
+\end{innerlist}
+
+
+\end{document}
