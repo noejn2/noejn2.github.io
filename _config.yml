@@ -1,7 +1,7 @@
 title: Noé J Nava | noejn2
 author: Noé J Nava
-email: Noe.Nava@usda.gov
-description: I am a microeconomist.
+email: noejnava2@gmail.com
+description: I write econ papers and code, mostly.
 show_excerpts: true # set to true to show excerpts on the homepage
 
 sass:
@@ -14,19 +14,19 @@ plainwhite:
 
   # generate social links in footer
   social_links:
-    twitter: normalEconomist
-    github: Noe-J-Nava
+    email: noejnava2@gmail.com
+    github: noejn2
     linkedIn: in/nnrnoah
 
   navigation:
-    #- title: About me
-    #  url: "https://noejn2.github.io/"
+    - title: About me
+      url: "https://noejn2.github.io/"
     - title: Research Agenda
       url: "/current-research/current-research"
     - title: CV
       url: "/cv/cv_nava.pdf"
-    - title: Blog
-      url: "/wk/wk"
+    #- title: Blog
+    #  url: "/wk/wk"
 
 theme: jekyll-theme-cayman
 
