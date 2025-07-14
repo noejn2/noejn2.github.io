@@ -14,14 +14,15 @@ plainwhite:
 
   # generate social links in footer
   social_links:
-    youtube: noejnava2@gmail.com
+    mail: noejnava2@gmail.com
     github: noejn2
     linkedIn: in/nnrnoah
+    calendar: "https://calendly.com/your-calendar-link"
 
   navigation:
     - title: About me
       url: "https://noejn2.github.io/"
-    - title: US Domestic Ag. Trade
+    - title: Trade Projects
       url: https://noejnava2.shinyapps.io/us_ag_flows_gravityge/
     # - title: Research Agenda
     #   url: "/current-research/current-research"
