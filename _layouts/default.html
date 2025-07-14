@@ -14,6 +14,7 @@
       </h2>
       <p class="tagline">{{ site.plainwhite.tagline }}</p>
       <ul class="social">
+
         {%- if site.plainwhite.social_links.github -%}
         <a href="https://github.com/{{ site.plainwhite.social_links.github }}">
           <li>
@@ -21,6 +22,7 @@
           </li>
         </a>
         {%- endif -%}
+
         {%- if site.plainwhite.social_links.linkedIn -%}
         <a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}">
           <li>
@@ -28,6 +30,7 @@
           </li>
         </a>
         {%- endif -%}
+
         {%- if site.plainwhite.social_links.mail -%}
         <a href="mailto:{{ site.plainwhite.social_links.mail }}">
           <li>
@@ -35,6 +38,7 @@
           </li>
         </a>
         {%- endif -%}
+
         {%- if site.plainwhite.social_links.calendar -%}
         <a href="{{ site.plainwhite.social_links.calendar }}">
           <li>
@@ -42,6 +46,7 @@
           </li>
         </a>
         {%- endif -%}
+
       </ul>
       {%- if site.plainwhite.navigation -%}
       <nav class="navigation">
