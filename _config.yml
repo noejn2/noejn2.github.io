@@ -21,8 +21,10 @@ plainwhite:
   navigation:
     - title: About me
       url: "https://noejn2.github.io/"
-    - title: Research Agenda
-      url: "/current-research/current-research"
+    - title: US Domestic Ag. Trade
+      url: https://noejnava2.shinyapps.io/us_ag_flows_gravityge/
+    # - title: Research Agenda
+    #   url: "/current-research/current-research"
     - title: CV
       url: "/cv/cv_nava.pdf"
     #- title: Blog
