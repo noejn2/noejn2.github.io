@@ -65,6 +65,12 @@
       "css": "flickr",
       "code": 61806,
       "src": "fontawesome"
+    },
+    {
+      "uid": "ff99ff2b8dfa62865c82cb4769abc8d8",
+      "css": "mail-alt",
+      "code": 61443,
+      "src": "fontawesome"
     }
   ]
 }
