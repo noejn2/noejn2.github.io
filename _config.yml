@@ -29,7 +29,7 @@ plainwhite:
     - title: US Domestic Ag. Trade
       url: https://noejnava2.shinyapps.io/us_ag_flows_gravityge/
     - title: gravityGE
-      url: "project-descriptions/gravityGE.md"
+      url: "/project-descriptions/gravityGE.md"
     - title: Statistical Inference
       url: https://noejnava2.shinyapps.io/us_ag_flows_gravityge/
 
