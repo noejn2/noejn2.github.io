@@ -30,9 +30,10 @@ plainwhite:
       url: https://noejnava2.shinyapps.io/us_ag_flows_gravityge/
     - title: gravityGE
       url: "/project-descriptions/gravityGE"
-    - title: AID system Censorship Correction
+    - title: US Yield Predictions
       url: "/project-descriptions/short-term-preds"
-    - title: Short-term US Yield Predictions
+    - title: Statistical Inference
+      url: "/project-descriptions/censorship-correction"
 
 theme: jekyll-theme-cayman
 
