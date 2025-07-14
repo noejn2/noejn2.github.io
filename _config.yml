@@ -20,17 +20,15 @@ plainwhite:
     calendar: "https://calendly.com/your-calendar-link"
 
   navigation:
-    - title: " "
-      url: "#"
     - title: About me
       url: "https://noejn2.github.io/"
     - title: CV
       url: "/cv/cv_nava.pdf"
     - title: " "
       url: "#"
-    - title: Dashboards
+    - title: US Domestic Ag. Trade
       url: https://noejnava2.shinyapps.io/us_ag_flows_gravityge/
-    - title: Trade
+    - title: gravityGE
       url: https://noejnava2.shinyapps.io/us_ag_flows_gravityge/
     - title: Statistical Inference
       url: https://noejnava2.shinyapps.io/us_ag_flows_gravityge/
