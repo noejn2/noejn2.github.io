@@ -17,7 +17,7 @@ plainwhite:
     mail: "noejnava2@gmail.com"
     github: noejn2
     linkedIn: in/nnrnoah
-    calendar: "https://calendly.com/your-calendar-link"
+    # calendar: "https://calendly.com/your-calendar-link"
 
   navigation:
     - title: About me

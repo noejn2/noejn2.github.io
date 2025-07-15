@@ -14,4 +14,4 @@ The main methodological innovation is the development of a **parametrized Beta-t
 
 Compared to previous methods (e.g., Ricardian or standard Beta models), this framework uniquely combines **distributional flexibility, unit-level heterogeneity, and full Bayesian inference**, making it particularly suited for short-term, spatially disaggregated climate impact assessment. The methodology is demonstrated through 2032 projections for corn and soybean yields under different crop growth regimes.
 
-For a visual overview, see the slides [ers-aaea2023 (PDF)](../project-assets/ers-aaea2023.pdf), presented at the AAEA 2023 meeting in Washington, DC.
+For a visual overview, see the slides [ers-aaea2023 (PDF)](../project-assets/ers-aaea2023-session.pdf), presented at the AAEA 2023 meeting in Washington, DC.

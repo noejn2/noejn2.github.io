@@ -1,4 +1,4 @@
-# Censorship Correction in Almost Ideal Demand (AIDS) Systems
+# Censorship Correction in Almost Ideal Demand (AID) systems
 
 This research introduces a methodological advance in demand estimation by integrating **censoring corrections into Quadratic Almost Ideal Demand Systems (QUAIDS)**. The approach addresses a key challenge in applied demand analysis: households often report zero consumption of certain goods, which, if ignored, can bias results. By embedding censoring directly into the QUAIDS framework, the method enables more accurate and behaviorally consistent estimation of demand elasticities and welfare effects, as demonstrated in the evaluation of Mexico's sugar-sweetened beverage tax.
 
