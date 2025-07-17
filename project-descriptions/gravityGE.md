@@ -29,13 +29,23 @@ library(gravityGE)
 **CRAN Package**: [https://CRAN.R-project.org/package=gravityGE](https://CRAN.R-project.org/package=gravityGE)
 
 
-
 ## Julia Installation
+
+Install the JuliaHub package
 
 ```julia
 # Installing the package in environment
 import Pkg
-Pkg.add(gravityGE)
+Pkg.add(GravityGE)
 
 using gravityGE
+```
+
+**JuliaHub Package**:[https://juliahub.com/ui/Packages/General/GravityGE](https://juliahub.com/ui/Packages/General/GravityGE)
+
+Install the developer's version
+
+```julia
+using Pkg
+Pkg.add(url="https://github.com/noejn2/GravityGE.jl")
 ```
