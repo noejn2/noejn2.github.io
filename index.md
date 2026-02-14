@@ -9,7 +9,7 @@ I advise government ministries on developing and deploying computable general eq
 
 My technical expertise spans gravity modeling, general equilibrium simulations, Bayesian inference, and likelihood-based estimation. I am an experienced programmer in R and Julia, with modeling packages published on CRAN ([gravityGE](https://CRAN.R-project.org/package=gravityGE), [censoredAIDS](https://CRAN.R-project.org/package=censoredAIDS)) and [JuliaHub](https://juliahub.com/ui/Packages/General/GravityGE). I deploy modeling tools using modern cloud infrastructure including Docker, AWS, Azure, Shiny Server, and GitHub Actions for CI/CD, ensuring secure and scalable access for end users.
 
-My public-facing work includes the [U.S. Domestic Agricultural Trade Dashboard](https://noejnava2.shinyapps.io/us_ag_flows_gravityge/), an interactive tool for exploring interstate agricultural trade flows and simulating policy scenarios using gravity modeling with general equilibrium effects. Additional modeling tools developed for government clients are not public facing.
+My public-facing work includes the [U.S. Domestic Agricultural Trade Dashboard](https://noejnava2.shinyapps.io/us_ag_flows_gravityge/), an interactive tool for exploring interstate agricultural trade flows and simulating policy scenarios using gravity modeling with general equilibrium effects. Additional modeling tools developed for government clients are not public-facing; some include AI-powered interfaces that allow stakeholders to query results through natural language.
 
 Beyond model development, I have delivered capacity building workshops and training events to help government officials and technical staff adopt these modeling tools effectively.
 

@@ -33,6 +33,7 @@ video {
 a {
   color: #000;
   transition: color 0.3s;
+
   &:hover {
     color: $linkColor;
   }
@@ -41,6 +42,7 @@ a {
 h2 {
   margin: 0.7em 0;
 }
+
 main {
   margin: 0 90px;
   display: flex;
@@ -50,9 +52,11 @@ main {
     margin: 0 auto;
     max-width: 1440px;
   }
+
   @media screen and (max-width: 1280px) {
     margin: 0 75px;
   }
+
   @media screen and (max-width: 1024px) {
     margin: 0 35px;
   }
@@ -61,6 +65,7 @@ main {
     margin: 0 10px;
     flex-direction: column;
   }
+
   @media screen and (max-width: $smallMobileW) {
     margin: 0;
   }
@@ -72,22 +77,27 @@ main {
       width: 100%;
     }
   }
+
   .about {
     display: flex;
     height: 100vh;
     padding-bottom: 15vh;
+
     @media screen and (max-width: $mobileW) {
       height: auto;
       padding: 10vh 0;
     }
+
     @media screen and (min-width: $mobileW + 1) {
       position: fixed;
       max-width: 285px;
     }
+
     min-width: $leftWidth;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
     h2 {
       font-size: 22px;
       margin-top: 25px;
@@ -95,23 +105,28 @@ main {
       color: #222222;
       font-weight: normal;
     }
+
     .tagline {
       font-size: 22px;
       margin-top: 17px;
       color: #aaa;
       white-space: pre-wrap;
       line-height: normal;
+      text-align: center;
     }
+
     img {
       max-width: 150px;
     }
   }
 }
+
 #title {
   a {
     text-decoration: none;
   }
 }
+
 .social {
   list-style-type: none;
   padding: 0;
@@ -119,9 +134,11 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   a {
     margin-bottom: .5em;
   }
+
   li {
     i {
       font-size: 34px;
@@ -168,36 +185,44 @@ main {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
   li {
     font-size: 14px;
     float: left;
     background-color: #e3e3e3;
     padding: 5px 20px;
     border-radius: 2px;
+
     @media screen and (max-width: $mobileW) {
       margin-top: 5px;
     }
+
     margin-right: 10px;
     margin-bottom: 10px;
   }
 }
+
 .post-date {
   margin-right: 10px;
   color: #555;
   min-width: 150px;
 }
+
 .post-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   @media screen and (max-width: $mobileW) {
     flex-direction: column-reverse;
     align-items: baseline;
+
     .post-date {
       margin-bottom: 16px;
     }
   }
 }
+
 .post-link {
   text-decoration: none;
 }
@@ -206,35 +231,43 @@ main {
   line-height: 1.2em;
   font-size: 28px;
 }
+
 .posts,
 .post-container {
   list-style-type: none;
   margin: 45px 30px;
+
   @media screen and (max-width: $smallMobileW) {
     margin-left: 20px;
     margin-right: 20px;
   }
+
   @media screen and (max-width: $mobileW) {
     padding: 0 !important;
     margin-top: 0;
   }
 }
+
 .post-container {
   padding-left: 30px;
 }
+
 .post {
   font-family: "Merriweather", sans-serif;
   font-weight: 300;
   color: #222;
   line-height: 1.9em;
+
   a {
     color: $linkColor;
     text-decoration: none;
     transition: border-bottom 0.4s;
+
     &:hover {
       border-bottom: 0.5px solid $linkColor;
     }
   }
+
   h1,
   h2,
   h3,
