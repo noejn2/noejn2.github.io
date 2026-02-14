@@ -8,7 +8,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: Noé J Nava
-  tagline: "Economic Modeling<br><center>Advisor</center>"
+  tagline: "Economic Modeling<br>Advisor"
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
 
