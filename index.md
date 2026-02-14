@@ -3,21 +3,16 @@ layout: home
 title: "About me"
 ---
 
-Model-based microeconomist focused on designing economic models that support decision-making and explain market behavior.
+Economic Modeling Advisor providing technical assistance and capacity development to government institutions on quantitative trade policy modeling and analysis.
 
-I currently serve as an Economic Modeling Advisor, where I develop and apply quantitative tools to help stakeholders assess complex economic systems. My work draws on computational techniques such as general equilibrium (GE) models, gravity models of trade, Bayesian methods, calibrated likelihood frameworks, and stochastic analysis. I focus on translating economic theory into practical tools that inform policy and strategy.
+I advise government ministries on developing and deploying computable general equilibrium (CGE) models to assess the economic impacts of trade agreements and policy reforms. My work focuses on building institutional modeling capacity—designing analytical tools that stakeholders can use independently to simulate trade scenarios, evaluate negotiation positions, and inform policy decisions. This includes developing secure deployment frameworks for sharing economic modeling tools across agencies.
 
-Previously, I worked as a Research Agricultural Economist at the USDA Economic Research Service, where I analyzed food systems and their implications for farmer welfare and human health. My research there examined how modeling assumptions influence our understanding of food markets.
+My technical expertise spans gravity modeling, general equilibrium simulations, Bayesian inference, and likelihood-based estimation. I am an experienced programmer in R and Julia, with modeling packages published on CRAN ([gravityGE](https://CRAN.R-project.org/package=gravityGE), [censoredAIDS](https://CRAN.R-project.org/package=censoredAIDS)) and [JuliaHub](https://juliahub.com/ui/Packages/General/GravityGE). I deploy modeling tools using modern cloud infrastructure including Docker, AWS, Azure, Shiny Server, and GitHub Actions for CI/CD, ensuring secure and scalable access for end users.
 
-I hold a Ph.D. in Agricultural and Applied Economics from the University of Illinois, with methodological expertise in Bayesian inference, likelihood-based estimation, and general equilibrium simulations.
+My public-facing work includes the [U.S. Domestic Agricultural Trade Dashboard](https://noejnava2.shinyapps.io/us_ag_flows_gravityge/), an interactive tool for exploring interstate agricultural trade flows and simulating policy scenarios using gravity modeling with general equilibrium effects. Additional modeling tools developed for government clients are not public facing.
 
-<!--
+Beyond model development, I have delivered capacity building workshops and training events to help government officials and technical staff adopt these modeling tools effectively.
 
-studying food systems and their implications for farmers' welfare and human health.
+Previously, I served as a Research Agricultural Economist at the USDA Economic Research Service, where I developed models to analyze food systems and their implications for agricultural markets and farmer welfare. I also contributed to building an international agricultural baseline modeling tool that enables government agencies to evaluate policy proposals against long-term projections over 10–30 year horizons.
 
-I joined the USDA Economic Research Service as a research agricultural economist for the Agricultural Policy & Models Branch in the Market & Trade Economics Division. I hold a Ph.D. in Agricultural and Applied Economics from the University of Illinois.
-
-My work explores the opportunities and limitations of methodological advancements to accurately reflect food markets. I strive to understand how market assumptions have implications for the Mathematical modeling of consumers and producers. For this purpose, I employ computational methodologies such as Bayesian methods, specific-case parametrization of log-likelihood functions, and G.E. simulations to inform food policy.
-
-Outside economics, I am a geo-politics nerd (including non-fictional regions) who enjoys hiking and travel, and a podcast listener who walks from 4pm to 5pm every day. In Winters, I hibernate, but mostly I remote-work and play video games. Currently reading Daniel Kahneman's *Thinking, Fast and Slow*.
--->
+I hold a Ph.D. in Agricultural and Applied Economics from the University of Illinois.
