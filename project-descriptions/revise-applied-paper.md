@@ -6,11 +6,11 @@ title: "AI Paper Referee: revise-applied-paper"
 # AI Paper Referee
 
 **revise-applied-paper** is a [Claude Code](https://claude.com/claude-code) skill that referees and
-revises an applied economics paper (`.qmd`, `.md`, or `.tex`) against Marc F. Bellemare's
-*[How to Write Applied Papers in Economics](http://marcfbellemare.com/wordpress/)* (2020). It reads
-your draft the way a journal referee would, writes a referee report, and then revises the manuscript
-against that report — leaving a paper trail you can diff across drafts. The code lives on
-[GitHub](https://github.com/noejn2/revise-applied-paper).
+revises an applied economics paper (`.qmd`, `.md`, or `.tex`) against the writing standards in
+Marc F. Bellemare's *[Doing Economics](https://mitpress.mit.edu/9780262543552/doing-economics/)*
+(MIT Press, 2022). It reads your draft the way a journal referee would, writes a referee report, and
+then revises the manuscript against that report — leaving a paper trail you can diff across drafts.
+The code lives on [GitHub](https://github.com/noejn2/revise-applied-paper).
 
 > **This is a writing-craft tool, not scientific peer review.** It helps the *practitioner* write a
 > better paper by checking the manuscript against Bellemare's recommendations on structure,
@@ -25,10 +25,34 @@ against that report — leaving a paper trail you can diff across drafts. The co
 ## Why it exists
 
 Applied papers get rejected for avoidable writing reasons — a buried research question, a thin data
-section, an introduction that overpromises, tables a reader can't reconstruct. Bellemare (2020) wrote
-down the unspoken norms that prevent this. This skill turns those norms into a repeatable check on
-your own draft, structured as a journal R&R, so the same discipline a good co-author would impose
-gets applied to every revision.
+section, an introduction that overpromises, tables a reader can't reconstruct. Bellemare wrote down
+the unspoken norms that prevent this in *Doing Economics*. This skill turns those norms into a
+repeatable check on your own draft, structured as a journal R&R, so the same discipline a good
+co-author would impose gets applied to every revision.
+
+## How it compares
+
+Plenty of AI tools will critique your writing. The difference here is its **standard of reference**:
+this skill audits your draft against a published, widely cited book on how applied economists actually
+write, so its comments trace back to an authority you can cite — not to a model's improvised opinion.
+The rest of the trade-off against hosted, paid reviewers looks like this:
+
+![How revise-applied-paper compares to hosted AI reviewers](assets/venn.png)
+
+Both approaches overlap on the basics — AI-powered review, writing and clarity checks, citation gaps,
+pre-submission feedback. They diverge on everything else:
+
+- **revise-applied-paper** (*open · free · yours*) is anchored to that citable authority, runs locally
+  so your unpublished draft never leaves your machine, costs $0 on top of Claude, is
+  [open to fork and adapt](https://github.com/noejn2/revise-applied-paper), teaches as it reviews, and
+  stays interactive — you push back on any comment and iterate live, on a whole draft or section by
+  section, at your own pace.
+- **Hosted alternatives** (*paid · hosted · deep compute*) trade those for raw horsepower: hours of
+  compute, whole-argument stress tests, deep proof-chasing, and a polished, shareable report with no
+  setup — at the cost of uploading your unpublished work to someone else's servers.
+
+In short: reach for a hosted reviewer when you want a heavyweight, one-shot stress test; reach for this
+when you want an everyday, private, authority-grounded craft check you control.
 
 ## How it works
 
@@ -36,7 +60,8 @@ The skill simulates a round of review in three steps:
 
 1. **Cold review.** A fresh subagent reads your manuscript *without* your conversation context — like
    a real referee who didn't watch you write it — and audits it against an ~80-item checklist
-   distilled from Bellemare (2020), walking every item section by section and running style sweeps
+   distilled from Bellemare's *Doing Economics*, walking every item section by section and running
+   style sweeps
    (tense, passive voice, code-style variable names in tables, over-precise decimals, unsupported
    causal language).
 2. **Referee report.** The findings are written up as a referee report — a summary of the paper,
@@ -148,10 +173,10 @@ Then run `/revise-applied-paper <your-draft>` in any project.
 
 ## Credit
 
-All of the substance here is Marc F. Bellemare's. The checklist is a distillation of his
-*How to Write Applied Papers in Economics* (September 2020), a chapter from his book *Doing
-Economics* (MIT Press). For the real thing, read the
-[original paper](http://marcfbellemare.com/wordpress/) and his
+All of the substance here is Marc F. Bellemare's. The checklist distills the chapter on writing
+applied papers from his book
+*[Doing Economics](https://mitpress.mit.edu/9780262543552/doing-economics/)* (MIT Press, 2022).
+For the real thing, read the book and his
 [blog](http://marcfbellemare.com/wordpress/) on academic writing — and Keith Head's
 [Introduction Formula](https://blogs.ubc.ca/khead/research/research-advice/formula), which it relies
 on.
