@@ -3,13 +3,15 @@ layout: home
 title: "About me"
 ---
 
-Economic Modeling Advisor providing technical assistance and capacity development to government institutions on quantitative trade policy modeling and analysis.
+Economic Modeling Advisor providing technical assistance and capacity development to government institutions on quantitative trade policy modeling and analysis—increasingly augmented with data-driven and AI tools.
 
 I advise government ministries on developing and deploying computable general equilibrium (CGE) models to assess the economic impacts of trade agreements and policy reforms. My work focuses on building institutional modeling capacity—designing analytical tools that stakeholders can use independently to simulate trade scenarios, evaluate negotiation positions, and inform policy decisions. This includes developing secure deployment frameworks for sharing economic modeling tools across agencies.
 
 My technical expertise spans gravity modeling, general equilibrium simulations, Bayesian inference, and likelihood-based estimation. I am an experienced programmer in R and Julia, with modeling packages published on CRAN ([gravityGE](https://CRAN.R-project.org/package=gravityGE), [censoredAIDS](https://CRAN.R-project.org/package=censoredAIDS)) and JuliaHub ([GravityGE.jl](https://juliahub.com/ui/Packages/General/GravityGE)). I deploy modeling tools using modern cloud infrastructure including Docker, AWS, Azure, Shiny Server, and GitHub Actions for CI/CD, ensuring secure and scalable access for end users.
 
-My public-facing work includes the [U.S. Domestic Agricultural Trade Dashboard](https://noejnava2.shinyapps.io/us_ag_flows_gravityge/), an interactive tool for exploring interstate agricultural trade flows and simulating policy scenarios using gravity modeling with general equilibrium effects, and the [Fertilizer Flows Dashboard](https://noejnava2.shinyapps.io/FertilizerFlows-app/), an interactive tool for visualizing global fertilizer trade flows. Additional modeling tools developed for government clients are not public-facing; some include AI-powered interfaces that allow stakeholders to query results through natural language.
+My public-facing work includes the [U.S. Domestic Agricultural Trade Dashboard](https://noejnava2.shinyapps.io/us_ag_flows_gravityge/), an interactive tool for exploring interstate agricultural trade flows and simulating policy scenarios using gravity modeling with general equilibrium effects, and the [Fertilizer Flows Dashboard](https://noejnava2.shinyapps.io/FertilizerFlows-app/), an interactive tool for visualizing global fertilizer trade flows.
+
+Increasingly, my advisory work pairs economics-driven modeling with data-driven and AI methods so that institutions can make better policy decisions. I build AI-powered interfaces—including natural-language layers over economic models—that let non-technical stakeholders query results, run scenarios, and interpret findings without writing code. Some of these tools are developed for government clients and are not public-facing; on the open-source side, my [AI Paper Referee](/project-descriptions/revise-applied-paper) brings the same philosophy to research itself, using large language models to audit applied-economics writing against established standards.
 
 Beyond model development, I have delivered capacity building workshops and training events to help government officials and technical staff adopt these modeling tools effectively.
 
