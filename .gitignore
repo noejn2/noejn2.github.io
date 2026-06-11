@@ -24,3 +24,7 @@ __latexindent_temp.tex
 *.synctex.gz
 
 .vscode/
+
+## Agentic tooling (Claude Code, etc.) — keep local, don't publish:
+.claude/
+CLAUDE.md
