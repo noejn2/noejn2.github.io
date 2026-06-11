@@ -30,6 +30,8 @@ plainwhite:
       url: "/project-descriptions/revise-applied-paper"
     - title: US Domestic Ag. Trade
       url: https://noejnava2.shinyapps.io/us_ag_flows_gravityge/
+    - title: Fertilizer Flows
+      url: https://noejnava2.shinyapps.io/FertilizerFlows-app/
     - title: gravityGE
       url: "/project-descriptions/gravityGE"
     - title: US Yield Predictions
