@@ -52,9 +52,13 @@
       <nav class="navigation">
         <ul>
           {% for link in site.plainwhite.navigation %}
+          {% if link.section %}
+          <li class="nav-section">{{ link.section }}</li>
+          {% else %}
           <li>
-            <a href="{{ link.url }}">{{ link.title }}</a>
+            <a href="{{ link.url }}"{% if page.url == link.url %} class="active" aria-current="page"{% endif %}>{{ link.title }}{% if link.url contains '://' %} <span class="nav-ext" aria-hidden="true">&#8599;</span>{% endif %}</a>
           </li>
+          {% endif %}
           {% endfor %}
         </ul>
       </nav>

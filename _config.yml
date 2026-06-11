@@ -21,23 +21,26 @@ plainwhite:
 
   navigation:
     - title: About me
-      url: "https://noejn2.github.io/"
+      url: "/"
     - title: CV
       url: "/cv/cv_nava.pdf"
-    - title: " "
-      url: "#"
-    - title: AI Paper Referee
-      url: "/project-descriptions/revise-applied-paper"
+    - section: Dashboards
     - title: US Domestic Ag. Trade
       url: https://noejnava2.shinyapps.io/us_ag_flows_gravityge/
     - title: Fertilizer Flows
       url: https://noejnava2.shinyapps.io/FertilizerFlows-app/
+    - section: Software & Tools
+    - title: AI Paper Referee
+      url: "/project-descriptions/revise-applied-paper"
     - title: gravityGE
       url: "/project-descriptions/gravityGE"
+    - title: censoredAIDS
+      url: "/project-descriptions/censorship-correction"
+    - section: Research
     - title: US Yield Predictions
       url: "/project-descriptions/short-term-preds"
-    - title: Statistical Inference
-      url: "/project-descriptions/censorship-correction"
+    - title: Working Papers
+      url: "/blog/blog"
 
 theme: jekyll-theme-cayman
 
