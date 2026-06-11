@@ -2,7 +2,15 @@
 @import "ext/normalize";
 @import "syntax";
 
-$linkColor: #0a59b0;
+// Palette — ink + teal on warm white
+$ink:          #171717;
+$accent:       #0d7d74;
+$accentStrong: #0a5d56;
+$paper:        #fcfcfa;
+$muted:        #6b7280;
+$rule:         #e9e8e4;
+$linkColor:    $accent;
+
 $mobileW: 768px;
 $smallMobileW: 480px;
 $bigScreenW: 1600px;
@@ -16,9 +24,11 @@ $leftWidth: 220px;
 
 body {
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  line-height: .3em;
+  font-size: 17px;
+  line-height: 1.65;
   margin: 0;
+  color: $ink;
+  background: $paper;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -31,11 +41,17 @@ video {
 }
 
 a {
-  color: #000;
-  transition: color 0.3s;
+  color: $ink;
+  transition: color 0.2s ease;
 
   &:hover {
     color: $linkColor;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 }
 
@@ -99,24 +115,30 @@ main {
     align-items: center;
 
     h2 {
-      font-size: 22px;
-      margin-top: 25px;
+      font-size: 23px;
+      margin-top: 22px;
       margin-bottom: 0;
-      color: #222222;
+      color: $ink;
       font-weight: normal;
+      letter-spacing: -0.01em;
     }
 
     .tagline {
-      font-size: 22px;
-      margin-top: 17px;
-      color: #aaa;
+      font-size: 12.5px;
+      margin-top: 14px;
+      color: $muted;
       white-space: pre-wrap;
-      line-height: normal;
-      justify-content: center;
+      line-height: 1.5;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-weight: 600;
     }
 
     img {
       max-width: 150px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(23, 23, 23, 0.10);
     }
   }
 }
@@ -154,29 +176,49 @@ main {
     padding: 0;
     margin-top: 0;
 
-    li:last-child {
-      a {
-        border-bottom: 0;
-      }
-    }
-
     a {
       display: block;
       font-family: 'Merriweather';
       text-align: center;
-      padding: 1rem 0;
+      padding: 0.5rem 0;
       text-decoration: none;
-      border-bottom: 1px solid #ececec;
+      color: $ink;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $accent;
+      }
+
+      &.active {
+        color: $accent;
+        font-weight: 700;
+      }
 
       @media screen and (max-width: $mobileW) {
-        padding: 2rem 0;
+        padding: 0.8rem 0;
       }
     }
+  }
+
+  .nav-section {
+    font-family: "Raleway", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: $muted;
+    text-align: center;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  .nav-ext {
+    font-size: 0.7em;
+    color: $muted;
+    vertical-align: super;
   }
 }
 
 .post-wrapper {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $rule;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
 }
@@ -204,7 +246,7 @@ main {
 
 .post-date {
   margin-right: 10px;
-  color: #555;
+  color: $muted;
   min-width: 150px;
 }
 
@@ -236,6 +278,7 @@ main {
 .post-container {
   list-style-type: none;
   margin: 45px 30px;
+  max-width: 760px;
 
   @media screen and (max-width: $smallMobileW) {
     margin-left: 20px;
@@ -255,16 +298,18 @@ main {
 .post {
   font-family: "Merriweather", sans-serif;
   font-weight: 300;
-  color: #222;
-  line-height: 1.9em;
+  color: $ink;
+  line-height: 1.8;
 
   a {
     color: $linkColor;
     text-decoration: none;
-    transition: border-bottom 0.4s;
+    border-bottom: 1px solid rgba(13, 125, 116, 0.25);
+    transition: border-bottom 0.2s ease, color 0.2s ease;
 
     &:hover {
-      border-bottom: 0.5px solid $linkColor;
+      color: $accentStrong;
+      border-bottom: 1px solid $accent;
     }
   }
 
@@ -275,13 +320,15 @@ main {
   h5,
   h6 {
     font-family: Raleway, sans-serif;
+    color: $ink;
+    line-height: 1.25;
   }
 }
 
 #posts-label {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $rule;
   font-size: 15px;
-  color: #777;
+  color: $muted;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding-bottom: 10px;
