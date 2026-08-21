@@ -336,3 +336,16 @@ main {
   padding-bottom: 10px;
   font-weight: normal;
 }
+// ponytail: one class, no variants — a second notice style can wait until there is a second notice
+.notice {
+  border-left: 3px solid $accent;
+  background: rgba(13, 125, 116, 0.05);
+  padding: 1rem 1.25rem;
+  margin: 0 0 2rem;
+  border-radius: 0 4px 4px 0;
+  font-size: 16px;
+
+  p {
+    margin: 0;
+  }
+}

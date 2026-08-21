@@ -3,6 +3,10 @@ layout: home
 title: "About me"
 ---
 
+<div class="notice" markdown="1">
+**Open to new roles in the U.S. starting January 2027.** My current advisory contract wraps at the end of 2026 and I am returning to the United States. I am looking for full-time work—government, industry, or research—anywhere in the U.S., and I also take on consulting engagements through my firm, International Trade Economics Modeling (ITEM). If you are hiring, or know someone who is, reach me by [email](mailto:noejnava2@gmail.com) or on [LinkedIn](https://www.linkedin.com/in/nnrnoah).
+</div>
+
 Economic Modeling Advisor providing technical assistance and capacity development to government institutions on quantitative trade policy modeling and analysis—increasingly augmented with data-driven and AI tools.
 
 I advise government ministries on developing and deploying computable general equilibrium (CGE) models to assess the economic impacts of trade agreements and policy reforms. My work focuses on building institutional modeling capacity—designing analytical tools that stakeholders can use independently to simulate trade scenarios, evaluate negotiation positions, and inform policy decisions. This includes developing secure deployment frameworks for sharing economic modeling tools across agencies.
