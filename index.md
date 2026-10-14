@@ -22,3 +22,5 @@ Beyond model development, I have delivered capacity building workshops and train
 Previously, I served as a Research Agricultural Economist at the USDA Economic Research Service, where I developed models to analyze food systems and their implications for agricultural markets and farmer welfare. I also contributed to building an international agricultural baseline modeling tool that enables government agencies to evaluate policy proposals against long-term projections over 10–30 year horizons.
 
 I hold a Ph.D. in Agricultural and Applied Economics from the University of Illinois.
+
+My job market paper, *Inflation and minimum-wage growth erode the nutritional gains from Mexico's sugar-sweetened beverage tax*, can be found [here](/project-assets/Nava-jmp-sugartax-erosion.pdf).
